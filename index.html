@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoTravel – Explore the World Responsibly</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="components/navbar.js"></script>
+    <script src="components/sidebar.js"></script>
+    <script src="components/footer.js"></script>
+</head>
+<body class="font-poppins bg-gray-50">
+    <!-- Navbar Component -->
+    <custom-navbar></custom-navbar>
+
+    <!-- Sidebar Component (hidden on mobile) -->
+    <custom-sidebar></custom-sidebar>
+
+    <main class="lg:ml-64 transition-all duration-300">
+        <!-- Hero Carousel -->
+        <section class="relative h-96 overflow-hidden">
+            <div class="carousel-container absolute inset-0 flex">
+                <div class="carousel-slide min-w-full h-full">
+                    <img src="http://static.photos/nature/1200x630/1" alt="Nature destination" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                        <div class="text-center text-white px-4">
+                            <h1 class="text-4xl md:text-5xl font-bold mb-4">Discover Sustainable Travel</h1>
+                            <p class="text-xl md:text-2xl mb-6">Explore breathtaking destinations while preserving nature</p>
+                            <a href="#" class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition duration-300">Explore Tours</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-slide min-w-full h-full">
+                    <img src="http://static.photos/travel/1200x630/2" alt="Travel destination" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                        <div class="text-center text-white px-4">
+                            <h1 class="text-4xl md:text-5xl font-bold mb-4">Eco-Friendly Adventures</h1>
+                            <p class="text-xl md:text-2xl mb-6">Journey responsibly with our sustainable travel options</p>
+                            <a href="#" class="inline-block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg transition duration-300">View Packages</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-prev absolute left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 p-2 rounded-full">
+                <i data-feather="chevron-left"></i>
+            </button>
+            <button class="carousel-next absolute right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-50 hover:bg-opacity-75 p-2 rounded-full">
+                <i data-feather="chevron-right"></i>
+            </button>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-16 px-4 max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">About EcoTravel</h2>
+                <div class="w-24 h-1 bg-green-600 mx-auto"></div>
+            </div>
+            <div class="md:flex items-center gap-12">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="http://static.photos/outdoor/640x360/3" alt="Sustainable travel" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Our Commitment to Sustainable Tourism</h3>
+                    <p class="text-gray-600 mb-4">At EcoTravel, we believe in exploring the world responsibly. Our mission is to provide unforgettable travel experiences while minimizing our environmental impact and supporting local communities.</p>
+                    <p class="text-gray-600 mb-6">We carefully select eco-friendly accommodations, promote low-carbon transportation options, and ensure our tours contribute positively to the destinations we visit.</p>
+                    <a href="#" class="text-green-600 hover:text-green-800 font-medium flex items-center">
+                        Learn more about our sustainability practices
+                        <i data-feather="arrow-right" class="ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Destinations -->
+        <section class="py-16 bg-gray-100">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Featured Destinations</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Explore our carefully curated selection of eco-friendly destinations around the world</p>
+                </div>
+                <div class="destination-slider">
+                    <div class="destination-card">
+                        <img src="http://static.photos/nature/640x360/4" alt="Costa Rica" class="w-full h-48 object-cover rounded-t-lg">
+                        <div class="bg-white p-6 rounded-b-lg shadow-md">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Costa Rica Eco Adventure</h3>
+                            <p class="text-gray-600 mb-4">Explore lush rainforests and pristine beaches while supporting local conservation efforts.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-green-600 font-medium">From $1,299</span>
+                                <a href="#" class="text-sm bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded transition duration-300">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <img src="http://static.photos/travel/640x360/5" alt="Norway" class="w-full h-48 object-cover rounded-t-lg">
+                        <div class="bg-white p-6 rounded-b-lg shadow-md">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Norwegian Fjords Expedition</h3>
+                            <p class="text-gray-600 mb-4">Witness breathtaking fjords and northern lights with our carbon-neutral tours.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-green-600 font-medium">From $2,499</span>
+                                <a href="#" class="text-sm bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded transition duration-300">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <img src="http://static.photos/nature/640x360/6" alt="Bhutan" class="w-full h-48 object-cover rounded-t-lg">
+                        <div class="bg-white p-6 rounded-b-lg shadow-md">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Bhutan Cultural Journey</h3>
+                            <p class="text-gray-600 mb-4">Experience the happiest country on Earth through sustainable cultural immersion.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-green-600 font-medium">From $3,199</span>
+                                <a href="#" class="text-sm bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded transition duration-300">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sustainability Info -->
+        <section class="py-16 px-4 max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Sustainability Initiatives</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">How we're making a difference in responsible tourism</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="cloud" class="text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Carbon Neutral Tours</h3>
+                    <p class="text-gray-600">We offset 100% of our tours' carbon emissions through verified projects.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="home" class="text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Eco-Certified Lodging</h3>
+                    <p class="text-gray-600">We partner with accommodations that meet strict environmental standards.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i data-feather="users" class="text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Community Support</h3>
+                    <p class="text-gray-600">A portion of every booking goes directly to local community projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 bg-green-700 text-white">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <h2 class="text-3xl font-bold mb-6">Ready to Travel Responsibly?</h2>
+                <p class="text-lg mb-8 max-w-2xl mx-auto">Join us in exploring the world while making a positive impact. Our travel experts are ready to help you plan your perfect eco-friendly adventure.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#" class="bg-white text-green-700 hover:bg-gray-100 px-8 py-4 rounded-lg font-medium transition duration-300">Book Your Trip</a>
+                    <a href="#" class="bg-transparent border-2 border-white hover:bg-white hover:bg-opacity-10 px-8 py-4 rounded-lg font-medium transition duration-300">Contact Our Team</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-16 bg-gray-100">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Traveler Testimonials</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Hear from our community of responsible travelers</p>
+                </div>
+                <div class="testimonial-slider">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden mr-4">
+                                <img src="http://static.photos/people/200x200/7" alt="Sarah J." class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Sarah J.</h4>
+                                <div class="flex text-yellow-400">
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic">"The Costa Rica Eco Adventure was life-changing. I loved knowing that our tour was actually helping preserve the rainforest we were exploring. The guides were incredibly knowledgeable about local conservation efforts."</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden mr-4">
+                                <img src="http://static.photos/people/200x200/8" alt="Michael T." class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Michael T.</h4>
+                                <div class="flex text-yellow-400">
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic">"The attention to sustainability in every aspect of the Bhutan trip was impressive. From the locally-owned hotels to the small group size, it felt like we were truly contributing to the local economy."</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden mr-4">
+                                <img src="http://static.photos/people/200x200/9" alt="Priya K." class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Priya K.</h4>
+                                <div class="flex text-yellow-400">
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                    <i data-feather="star" class="w-4 h-4 fill-current"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic">"As someone who's passionate about responsible travel, I was thrilled with the Norwegian Fjords trip. The carbon offset program was transparent, and the electric boat tours were amazing!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <custom-footer></custom-footer>
+
+    <script src="script.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

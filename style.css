@@ -1,0 +1,99 @@
+/* Base styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Hero Carousel */
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    position: relative;
+    min-width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-slide div {
+        padding: 0 1rem;
+    }
+    .carousel-slide h1 {
+        font-size: 2rem;
+    }
+    .carousel-slide p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Destination Cards */
+.destination-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.destination-card {
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Testimonial Slider */
+.testimonial-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Hamburger menu for mobile */
+.mobile-menu-button {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+    .mobile-menu-button {
+        display: block;
+    }
+    main {
+        margin-left: 0;
+    }
+    .sidebar-hidden {
+        transform: translateX(-100%);
+    }
+    .sidebar-visible {
+        transform: translateX(0);
+    }
+}
+
+/* Animation classes */
+.transition-all {
+    transition-property: all;
+}
+
+.duration-300 {
+    transition-duration: 300ms;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4ade80;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #22c55e;
+}
